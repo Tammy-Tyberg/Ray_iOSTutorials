@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController : UIViewController<UIAlertViewDelegate> {
     
@@ -14,9 +15,15 @@
     IBOutlet UILabel *scoreLabel;//hinting we want this to be an outlet
     IBOutlet UILabel *timerLabel;
     
-    int count; //hold number of taps using NSInt since can hold huge numbers
+   int count; //hold number of taps using NSInt since can hold huge numbers
     NSInteger seconds;//seconds remaining
     NSTimer *timer;
+    
+    AVAudioPlayer *buttonBeep;
+    AVAudioPlayer *secondBeep;
+    AVAudioPlayer *backgroundMusic;
+    
+    
     
 }
 

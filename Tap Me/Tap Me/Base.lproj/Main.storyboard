@@ -18,30 +18,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time 30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOS-lC-VRD">
-                                <rect key="frame" x="109" y="50" width="108" height="37"/>
+                                <rect key="frame" x="109" y="50" width="133" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.97176846590909094" green="0.97176846590909094" blue="0.97176846590909094" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vst-zV-Om6">
+                                <rect key="frame" x="78" y="406" width="170" height="102"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpd-X9-TKX">
-                                <rect key="frame" x="68" y="155" width="209" height="221"/>
-                                <color key="backgroundColor" red="1" green="0.92840711369136686" blue="0.92927097107378875" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="73" y="138" width="228" height="240"/>
+                                <color key="backgroundColor" red="1" green="0.85461742327140866" blue="0.83081522981254208" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <color key="tintColor" red="1" green="0.92840711369136686" blue="0.92927097107378875" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Tap Me!">
+                                <state key="normal" backgroundImage="button_tap_deselected.png">
                                     <color key="titleColor" red="1" green="0.33629961650000001" blue="0.33940157970000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <state key="highlighted" backgroundImage="button_tap_selected.png"/>
                                 <connections>
                                     <action selector="buttonPressed" destination="dkx-z0-nzr" eventType="touchUpInside" id="Knn-ix-uyv"/>
                                     <action selector="buttonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="j18-z2-bAC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vst-zV-Om6">
-                                <rect key="frame" x="78" y="406" width="170" height="90"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checker_bottom.png" translatesAutoresizingMaskIntoConstraints="NO" id="R6P-HY-Jgd">
+                                <rect key="frame" x="0.0" y="561" width="600" height="39"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checker_top.png" highlightedImage="checker_top.png" translatesAutoresizingMaskIntoConstraints="NO" id="1EN-gy-6Sd">
+                                <rect key="frame" x="0.0" y="15" width="600" height="42"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.30385402989999999" green="1" blue="0.60154439689999994" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -52,7 +59,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="429"/>
+            <point key="canvasLocation" x="285" y="411"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_tap_deselected.png" width="250" height="265"/>
+        <image name="button_tap_selected.png" width="250" height="265"/>
+        <image name="checker_bottom.png" width="320" height="23"/>
+        <image name="checker_top.png" width="320" height="22"/>
+    </resources>
 </document>

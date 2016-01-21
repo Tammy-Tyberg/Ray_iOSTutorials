@@ -14,10 +14,41 @@
 @end
 @implementation ViewController
 
+- (AVAudioPlayer *)setupAudioPlayerWithFile:(NSString *)file type:(NSString *)type
+{
+    // 1
+    NSString *path = [[NSBundle mainBundle] pathForResource:file ofType:type];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    
+    // 2
+    NSError *error;
+    
+    // 3
+    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    
+    // 4
+    if (!audioPlayer) {
+        NSLog(@"%@",[error description]);
+    }
+    
+    // 5
+    return audioPlayer;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_tile.prng"]]; //calling view to put background image
+    scoreLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"field_score.png"]];
+    timerLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"field_time.png"]];
+    
+    
+    
+     buttonBeep = [self setupAudioPlayerWithFile:@"ButtonTap" type:@"wav"];
+    secondBeep = [self setupAudioPlayerWithFile:@"SecondBeep" type:@"wav"];
+    backgroundMusic = [self setupAudioPlayerWithFile:@"HallOfTheMountainKing" type:@"mp3"];
+    
     [self setupGame];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,6 +61,8 @@
     
     scoreLabel.text = [NSString stringWithFormat:@"Score\n%i", count];
       NSLog(@"You entered: %i", count);
+    
+    [buttonBeep play];
 }
 
 -(void)setupGame{
@@ -48,7 +81,8 @@
                                            userInfo:nil
                                             repeats:YES];
     
-    
+    [backgroundMusic setVolume:0.3];
+    [backgroundMusic play];
     
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -59,6 +93,8 @@
     
     seconds --;
     timerLabel.text = [NSString stringWithFormat:@"Time: %i",seconds];
+    
+    [secondBeep play];
     
     // 2
     if (seconds == 0) {
