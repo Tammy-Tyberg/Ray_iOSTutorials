@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController{
+@interface ViewController : UIViewController<UIAlertViewDelegate> {
     
     
     IBOutlet UILabel *scoreLabel;//hinting we want this to be an outlet

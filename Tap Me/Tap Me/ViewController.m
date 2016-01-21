@@ -10,13 +10,13 @@
 
 @interface ViewController ()
 
-@end
 
+@end
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    count = 0;
+    [self setupGame];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -51,6 +51,9 @@
     
     
 }
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self setupGame]; //when user presses pop up sends calls set up game
+}
 
 -(void)subtractTime{
     
@@ -61,7 +64,20 @@
     if (seconds == 0) {
         [timer invalidate];
     
+    }
     
+    if(seconds == 0){
+        [timer invalidate];
+        
+        
+        //sends alert
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Time is up!"
+                                                        message:[NSString stringWithFormat:@"You scored %i points", count]
+                                                       delegate:self
+                                              cancelButtonTitle:@"Play Again"
+                                              otherButtonTitles:nil];
+        
+        [alert show];
+    }
 }
-
 @end

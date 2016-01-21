@@ -46,7 +46,7 @@
                         <color key="backgroundColor" red="0.30385402989999999" green="1" blue="0.60154439689999994" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="scoreLabel" destination="Vst-zV-Om6" id="Vz2-zI-ein"/>
+                        <outlet property="scoreLabel" destination="Vst-zV-Om6" id="wnp-CV-bQ6"/>
                         <outlet property="timerLabel" destination="QOS-lC-VRD" id="EC1-fn-Zhv"/>
                     </connections>
                 </viewController>
