@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    count = 0;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -25,8 +26,42 @@
 }
 
 - (IBAction)buttonPressed {
-    scoreLabel.text = @"Pressed!";//score label is now connected to button so when pressed updates
-    NSLog(@"Pressed!");
+    count++;
+    
+    scoreLabel.text = [NSString stringWithFormat:@"Score\n%i", count];
+      NSLog(@"You entered: %i", count);
+}
+
+-(void)setupGame{
+    
+    seconds = 30;
+    count = 0;
+    
+    timerLabel.text = [NSString stringWithFormat:@"Time: %i", seconds];
+    scoreLabel.text = [NSString stringWithFormat:@"Score\n%i", count];
+    
+    
+    // 3
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                             target:self//message go to the view and this is view controller so itself
+                                           selector:@selector(subtractTime)
+                                           userInfo:nil
+                                            repeats:YES];
+    
+    
+    
+}
+
+-(void)subtractTime{
+    
+    seconds --;
+    timerLabel.text = [NSString stringWithFormat:@"Time: %i",seconds];
+    
+    // 2
+    if (seconds == 0) {
+        [timer invalidate];
+    
+    
 }
 
 @end

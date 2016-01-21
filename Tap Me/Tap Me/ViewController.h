@@ -14,6 +14,9 @@
     IBOutlet UILabel *scoreLabel;//hinting we want this to be an outlet
     IBOutlet UILabel *timerLabel;
     
+    int count; //hold number of taps using NSInt since can hold huge numbers
+    NSInteger seconds;//seconds remaining
+    NSTimer *timer;
     
 }
 
