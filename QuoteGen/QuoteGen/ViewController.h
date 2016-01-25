@@ -12,7 +12,10 @@
 
 @property (nonatomic, strong) NSArray *myQuotes;
 @property (nonatomic, strong) NSMutableArray *movieQuotes;
+@property (nonatomic, strong) IBOutlet UITextView *quoteText;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *quoteOpt;
 
+- (IBAction)quoteButtonTapped:(id)sender;
 
 @end
 
