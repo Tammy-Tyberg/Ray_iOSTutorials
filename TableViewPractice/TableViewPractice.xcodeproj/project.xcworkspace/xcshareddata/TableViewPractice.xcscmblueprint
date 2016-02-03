@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F2054D90016D500938EAF8C3E43207A7E2366A13",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F2054D90016D500938EAF8C3E43207A7E2366A13" : 0,
+    "0310C1D3D88CF731E993309C0B2F0A77118803E2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FE1C39C2-46D1-4A3D-8D74-6B6DC3E49337",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F2054D90016D500938EAF8C3E43207A7E2366A13" : "My_First_Project\/",
+    "0310C1D3D88CF731E993309C0B2F0A77118803E2" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TableViewPractice",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TableViewPractice\/TableViewPractice.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Tammy-Tyberg\/Raywenderlich_Tutorials.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0310C1D3D88CF731E993309C0B2F0A77118803E2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Tammy-Tyberg\/Ray_iOSTutorials.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F2054D90016D500938EAF8C3E43207A7E2366A13"
+    }
+  ]
+}
